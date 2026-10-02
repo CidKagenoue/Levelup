@@ -1,0 +1,104 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Games
+# @name Games_GET
+GET {{server}}/odata/v4/catalog/Games
+Authorization: Basic {{username}}:{{password}}
+
+
+### Games
+# @name Games_POST
+POST {{server}}/odata/v4/catalog/Games
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "23313793-c345-4d03-b2a1-cb39cf838d53",
+  "title": "title-23313793",
+  "description": "description-23313793",
+  "price": 3436.8,
+  "currency": {
+    "code": "529"
+  },
+  "genre": {
+    "code": "Genres-18462056"
+  },
+  "platform": {
+    "code": "Platforms-22113609"
+  },
+  "stock": 90,
+  "releaseDate": "2003-08-19",
+  "studioCountry": {
+    "code": "631"
+  },
+  "createdAt": "2018-12-27T00:00:00.000Z",
+  "createdBy": "createdBy.dvp1d@example.org",
+  "modifiedAt": "2011-12-24T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.dvp1d@example.com"
+}
+
+
+### Games
+# @name Games_PATCH
+PATCH {{server}}/odata/v4/catalog/Games/23313793-c345-4d03-b2a1-cb39cf838d53
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "23313793-c345-4d03-b2a1-cb39cf838d53",
+  "title": "title-23313793",
+  "description": "description-23313793",
+  "price": 3436.8,
+  "currency": {
+    "code": "529"
+  },
+  "genre": {
+    "code": "Genres-18462056"
+  },
+  "platform": {
+    "code": "Platforms-22113609"
+  },
+  "stock": 90,
+  "releaseDate": "2003-08-19",
+  "studioCountry": {
+    "code": "631"
+  },
+  "createdAt": "2018-12-27T00:00:00.000Z",
+  "createdBy": "createdBy.dvp1d@example.org",
+  "modifiedAt": "2011-12-24T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.dvp1d@example.com"
+}
+
+
+### Games
+# @name Games_DELETE
+DELETE {{server}}/odata/v4/catalog/Games/23313793-c345-4d03-b2a1-cb39cf838d53
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/catalog/Currencies
+Authorization: Basic {{username}}:{{password}}
+
+
+### Genres
+# @name Genres_GET
+GET {{server}}/odata/v4/catalog/Genres
+Authorization: Basic {{username}}:{{password}}
+
+
+### Platforms
+# @name Platforms_GET
+GET {{server}}/odata/v4/catalog/Platforms
+Authorization: Basic {{username}}:{{password}}
+
+
+### Countries
+# @name Countries_GET
+GET {{server}}/odata/v4/catalog/Countries
+Authorization: Basic {{username}}:{{password}}
