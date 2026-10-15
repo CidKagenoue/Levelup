@@ -16,66 +16,128 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "23313793-c345-4d03-b2a1-cb39cf838d53",
-  "title": "title-23313793",
-  "description": "description-23313793",
-  "price": 3436.8,
+  "ID": "31483321-bf1b-4b20-a1bf-334d45e1f3da",
+  "title": "title-31483321",
+  "description": "description-31483321",
+  "price": 9525.19,
   "currency": {
-    "code": "529"
+    "code": "118"
   },
   "genre": {
-    "code": "Genres-18462056"
+    "code": "Genres-21419652"
   },
   "platform": {
-    "code": "Platforms-22113609"
+    "code": "Platforms-19408759"
   },
-  "stock": 90,
-  "releaseDate": "2003-08-19",
+  "stock": 14,
+  "releaseDate": "2023-09-23",
   "studioCountry": {
-    "code": "631"
+    "code": "898"
   },
-  "createdAt": "2018-12-27T00:00:00.000Z",
-  "createdBy": "createdBy.dvp1d@example.org",
-  "modifiedAt": "2011-12-24T00:00:00.000Z",
-  "modifiedBy": "modifiedBy.dvp1d@example.com"
+  "tags": [
+    {
+      "tag": {
+        "code": "Tags-6474085"
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "ID": "5420768a-2c31-41ca-8bd7-4e7d4e5fef1b",
+      "customer": {
+        "ID": "10373490-d2a9-4615-94ae-5cc9ddaa5be9"
+      },
+      "rating": {
+        "code": 29349987
+      },
+      "createdAt": "2017-10-15T00:00:00.000Z",
+      "createdBy": "createdBy.386ow@example.com",
+      "modifiedAt": "2003-10-24T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.386ow@example.net"
+    },
+    {
+      "ID": "54207696-ea6c-4b0c-a056-ba16ac822b6e",
+      "customer": {
+        "ID": "10373490-d2a9-4615-94ae-5cc9ddaa5be9"
+      },
+      "rating": {
+        "code": 29349987
+      },
+      "createdAt": "2011-07-22T00:00:00.000Z",
+      "createdBy": "createdBy.386ox@example.net",
+      "modifiedAt": "2006-12-10T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.386ox@example.net"
+    }
+  ]
 }
 
 
 ### Games
 # @name Games_PATCH
-PATCH {{server}}/odata/v4/catalog/Games/23313793-c345-4d03-b2a1-cb39cf838d53
+PATCH {{server}}/odata/v4/catalog/Games/31483321-bf1b-4b20-a1bf-334d45e1f3da
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "23313793-c345-4d03-b2a1-cb39cf838d53",
-  "title": "title-23313793",
-  "description": "description-23313793",
-  "price": 3436.8,
+  "ID": "31483321-bf1b-4b20-a1bf-334d45e1f3da",
+  "title": "title-31483321",
+  "description": "description-31483321",
+  "price": 9525.19,
   "currency": {
-    "code": "529"
+    "code": "118"
   },
   "genre": {
-    "code": "Genres-18462056"
+    "code": "Genres-21419652"
   },
   "platform": {
-    "code": "Platforms-22113609"
+    "code": "Platforms-19408759"
   },
-  "stock": 90,
-  "releaseDate": "2003-08-19",
+  "stock": 14,
+  "releaseDate": "2023-09-23",
   "studioCountry": {
-    "code": "631"
+    "code": "898"
   },
-  "createdAt": "2018-12-27T00:00:00.000Z",
-  "createdBy": "createdBy.dvp1d@example.org",
-  "modifiedAt": "2011-12-24T00:00:00.000Z",
-  "modifiedBy": "modifiedBy.dvp1d@example.com"
+  "tags": [
+    {
+      "tag": {
+        "code": "Tags-6474085"
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "ID": "5420768a-2c31-41ca-8bd7-4e7d4e5fef1b",
+      "customer": {
+        "ID": "10373490-d2a9-4615-94ae-5cc9ddaa5be9"
+      },
+      "rating": {
+        "code": 29349987
+      },
+      "createdAt": "2017-10-15T00:00:00.000Z",
+      "createdBy": "createdBy.386ow@example.com",
+      "modifiedAt": "2003-10-24T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.386ow@example.net"
+    },
+    {
+      "ID": "54207696-ea6c-4b0c-a056-ba16ac822b6e",
+      "customer": {
+        "ID": "10373490-d2a9-4615-94ae-5cc9ddaa5be9"
+      },
+      "rating": {
+        "code": 29349987
+      },
+      "createdAt": "2011-07-22T00:00:00.000Z",
+      "createdBy": "createdBy.386ox@example.net",
+      "modifiedAt": "2006-12-10T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.386ox@example.net"
+    }
+  ]
 }
 
 
 ### Games
 # @name Games_DELETE
-DELETE {{server}}/odata/v4/catalog/Games/23313793-c345-4d03-b2a1-cb39cf838d53
+DELETE {{server}}/odata/v4/catalog/Games/31483321-bf1b-4b20-a1bf-334d45e1f3da
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -102,3 +164,144 @@ Authorization: Basic {{username}}:{{password}}
 # @name Countries_GET
 GET {{server}}/odata/v4/catalog/Countries
 Authorization: Basic {{username}}:{{password}}
+
+
+### GameTags
+# @name GameTags_GET
+GET {{server}}/odata/v4/catalog/GameTags
+Authorization: Basic {{username}}:{{password}}
+
+
+### GameTags
+# @name GameTags_POST
+POST {{server}}/odata/v4/catalog/GameTags
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "tag": {
+    "code": "Tags-6474085"
+  }
+}
+
+
+### Tags
+# @name Tags_GET
+GET {{server}}/odata/v4/catalog/Tags
+Authorization: Basic {{username}}:{{password}}
+
+
+### Reviews
+# @name Reviews_GET
+GET {{server}}/odata/v4/catalog/Reviews
+Authorization: Basic {{username}}:{{password}}
+
+
+### Reviews
+# @name Reviews_POST
+POST {{server}}/odata/v4/catalog/Reviews
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "5420768a-2c31-41ca-8bd7-4e7d4e5fef1b",
+  "customer": {
+    "ID": "10373490-d2a9-4615-94ae-5cc9ddaa5be9"
+  },
+  "rating": {
+    "code": 29349987
+  }
+}
+
+
+### Reviews
+# @name Reviews_PATCH
+PATCH {{server}}/odata/v4/catalog/Reviews/5420768a-2c31-41ca-8bd7-4e7d4e5fef1b
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "5420768a-2c31-41ca-8bd7-4e7d4e5fef1b",
+  "customer": {
+    "ID": "10373490-d2a9-4615-94ae-5cc9ddaa5be9"
+  },
+  "rating": {
+    "code": 29349987
+  }
+}
+
+
+### Reviews
+# @name Reviews_DELETE
+DELETE {{server}}/odata/v4/catalog/Reviews/5420768a-2c31-41ca-8bd7-4e7d4e5fef1b
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Customers
+# @name Customers_GET
+GET {{server}}/odata/v4/catalog/Customers
+Authorization: Basic {{username}}:{{password}}
+
+
+### Customers
+# @name Customers_POST
+POST {{server}}/odata/v4/catalog/Customers
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "10373490-d2a9-4615-94ae-5cc9ddaa5be9",
+  "firstname": "firstname-10373490",
+  "lastname": "lastname-10373490",
+  "email": "email-10373490",
+  "country": {
+    "code": "898"
+  }
+}
+
+
+### Customers
+# @name Customers_PATCH
+PATCH {{server}}/odata/v4/catalog/Customers/10373490-d2a9-4615-94ae-5cc9ddaa5be9
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "10373490-d2a9-4615-94ae-5cc9ddaa5be9",
+  "firstname": "firstname-10373490",
+  "lastname": "lastname-10373490",
+  "email": "email-10373490",
+  "country": {
+    "code": "898"
+  }
+}
+
+
+### Customers
+# @name Customers_DELETE
+DELETE {{server}}/odata/v4/catalog/Customers/10373490-d2a9-4615-94ae-5cc9ddaa5be9
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Rating
+# @name Rating_GET
+GET {{server}}/odata/v4/catalog/Rating
+Authorization: Basic {{username}}:{{password}}
+
+### Games Reviews
+# @name Customer_Reviews_GET
+GET {{server}}/odata/v4/catalog/Games(b7e5f1a0-0001-4000-8000-0000000000a1)/reviews?$expand=customer
+Authorization: Basic {{username}}:{{password}}
+
+
+### Game tags
+# @name Game_tags_GET
+GET {{server}}/odata/v4/catalog/Games(b7e5f1a0-0001-4000-8000-0000000000a6)/tags?$expand=tag
+Authorization: Basic {{username}}:{{password}}
+
+### 4. Filter games by tag (expect Neon Circuit Racing, Iron Vanguard, Goal Rush Soccer)
+GET {{server}}/odata/v4/catalog/Games?$filter=tags/any(t:t/tag_code eq 'MULTI')&$select=title
+
+

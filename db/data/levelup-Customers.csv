@@ -1,0 +1,9 @@
+ID,firstname,lastname,email,country_code,createdAt,createdBy,modifiedAt,modifiedBy
+a1b2c3d4-0001-4000-8000-000000000001,Alice,Peeters,alice.peeters@example.com,BE,2026-07-01T09:00:00Z,alice,2026-07-01T09:00:00Z,alice
+a1b2c3d4-0002-4000-8000-000000000002,Bob,Jansen,bob.jansen@example.com,NL,2026-07-05T13:30:00Z,bob,2026-08-10T16:45:00Z,admin
+a1b2c3d4-0003-4000-8000-000000000003,Carol,Dubois,carol.dubois@example.com,FR,2026-07-12T10:15:00Z,carol,2026-07-12T10:15:00Z,carol
+a1b2c3d4-0004-4000-8000-000000000004,Dave,Miller,dave.miller@example.com,GB,2026-07-20T18:20:00Z,dave,2026-08-02T11:00:00Z,dave
+a1b2c3d4-0005-4000-8000-000000000005,Erin,Schmidt,erin.schmidt@example.com,DE,2026-08-03T08:40:00Z,erin,2026-08-03T08:40:00Z,erin
+a1b2c3d4-0006-4000-8000-000000000006,Frank,Rossi,frank.rossi@example.com,IT,2026-09-15T12:00:00Z,frank,2026-09-15T12:00:00Z,frank
+a1b2c3d4-0007-4000-8000-000000000007,Grace,Lindqvist,grace.lindqvist@example.com,SE,2026-09-20T15:30:00Z,grace,2026-09-22T09:10:00Z,admin
+a1b2c3d4-0008-4000-8000-000000000008,Hugo,Martins,hugo.martins@example.com,PT,2026-10-01T10:45:00Z,hugo,2026-10-01T10:45:00Z,hugo

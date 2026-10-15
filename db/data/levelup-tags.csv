@@ -1,0 +1,9 @@
+code,name,descr
+SINGLE,Singleplayer,"Can be played alone"
+MULTI,Multiplayer,"Supports online or local play with others"
+COOP,Co-op,"Players team up against the game"
+STORY,Story Rich,"Strong narrative and characters"
+OPENWORLD,Open World,"Large explorable world with few restrictions"
+CASUAL,Casual,"Easy to pick up and play in short sessions"
+PIXEL,Pixel Art,"Retro-style pixel graphics"
+ARCADE,Arcade,"Fast, score-driven gameplay"

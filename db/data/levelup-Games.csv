@@ -1,16 +1,11 @@
 ID,title,description,price,currency_code,genre_code,platform_code,stock,releaseDate,studioCountry_code,createdAt,createdBy,modifiedAt,modifiedBy
-1,Neon Blade,"A cyberpunk brawler where you fight through rain-soaked city streets.",29.99,USD,ACT,PC,120,2025-06-12,JP,2025-01-10T09:15:00Z,admin,2025-02-01T14:30:00Z,jsmith
-2,Lost Meridian,"Explore a vanishing island and uncover the secrets of its ancient lighthouse.",24.99,EUR,ADV,PS5,85,2025-05-20,FR,2025-01-12T11:00:00Z,admin,2025-01-12T11:00:00Z,admin
-3,Realm of Embers,"Forge a hero, join a guild, and rebuild a kingdom ravaged by dragonfire.",59.99,USD,RPG,XSX,200,2025-09-05,CA,2025-01-15T08:45:00Z,mlopez,2025-03-05T10:20:00Z,mlopez
-4,Iron Dominion,"Command armies, manage supply lines, and conquer a fractured continent.",39.99,EUR,STR,PC,150,2025-04-18,DE,2025-01-20T13:10:00Z,jsmith,2025-02-18T16:05:00Z,akim
-5,Harvest Hollow,"Build a farm, befriend villagers, and restore a sleepy valley town.",19.99,USD,SIM,NSW,310,2025-03-28,US,2025-01-22T10:30:00Z,akim,2025-01-22T10:30:00Z,akim
-6,Gridiron Legends,"Lead your team through a full season of fast-paced arcade football.",49.99,USD,SPT,PS4,60,2025-08-22,US,2025-02-01T09:00:00Z,mlopez,2025-02-20T12:45:00Z,jsmith
-7,Apex Circuit,"Race exotic cars across mountain passes and neon-lit city tracks.",54.99,GBP,RAC,PS5,95,2025-10-10,GB,2025-02-03T15:20:00Z,admin,2025-03-10T09:10:00Z,admin
-8,Cipher Rooms,"Solve interlocking logic puzzles to escape a series of strange chambers.",9.99,EUR,PUZ,IOS,500,2025-02-14,SE,2025-02-05T12:00:00Z,akim,2025-02-05T12:00:00Z,akim
-9,Overkill Protocol,"Tactical squad-based shooter set in a collapsing orbital station.",59.99,USD,FPS,PC,175,2025-11-07,PL,2025-02-10T17:40:00Z,jsmith,2025-03-01T11:15:00Z,mlopez
-10,The Hollow Ward,"Survive a night shift in an abandoned asylum where something is awake.",17.99,GBP,HOR,PC,140,2025-10-30,GB,2025-02-14T20:00:00Z,mlopez,2025-02-28T19:30:00Z,mlopez
-11,Pixel Pogo,"Bounce, dash, and wall-jump through 60 hand-crafted retro levels.",12.99,EUR,PLT,NSW,260,2025-04-04,DE,2025-02-18T10:05:00Z,akim,2025-02-18T10:05:00Z,akim
-12,Fist of Ages,"A combo-driven fighter featuring warriors from across history.",44.99,JPY,FTG,PS5,0,2025-07-18,JP,2025-02-25T14:50:00Z,admin,2025-03-12T08:40:00Z,jsmith
-13,Aetheria Online,"A persistent fantasy world with player-run cities and seasonal events.",29.99,USD,MMO,PC,999,2025-01-30,US,2025-03-01T09:30:00Z,jsmith,2025-03-15T13:00:00Z,admin
-14,Paper Lanterns,"A quiet, hand-drawn journey about a child delivering light to a dark village.",14.99,EUR,IND,NSW,45,2025-09-19,SE,2025-03-04T16:25:00Z,mlopez,2025-03-04T16:25:00Z,mlopez
-15,Bubble Bloom,"Match colorful blossoms in short, relaxing puzzle sessions.",4.99,USD,CAS,AND,800,2025-03-21,CA,2025-03-08T11:45:00Z,akim,2025-03-09T10:00:00Z,akim
+b7e5f1a0-0001-4000-8000-0000000000a1,Starfall Odyssey,"A sprawling space RPG about a crew of smugglers, rebels, and lost explorers",59.99,EUR,RPG,PC,120,2025-03-14,BE,2026-06-01T09:00:00Z,admin,2026-06-01T09:00:00Z,admin
+b7e5f1a0-0001-4000-8000-0000000000a2,Neon Circuit Racing,"High-speed arcade racing through futuristic neon cities",49.99,USD,RAC,PS5,85,2024-11-08,JP,2026-06-01T09:05:00Z,admin,2026-07-10T14:20:00Z,alice
+b7e5f1a0-0001-4000-8000-0000000000a3,Mistwood Tactics,"Turn-based tactics set in an enchanted forest, with deep squad customization",39.99,EUR,STR,NSW,60,2025-06-20,SE,2026-06-01T09:10:00Z,admin,2026-06-01T09:10:00Z,admin
+b7e5f1a0-0001-4000-8000-0000000000a4,Blockhaven Builder,"Design, build, and manage your own medieval town",29.99,USD,SIM,PC,200,2023-09-01,US,2026-06-02T10:00:00Z,bob,2026-06-02T10:00:00Z,bob
+b7e5f1a0-0001-4000-8000-0000000000a5,Echoes of the Deep,"An atmospheric underwater adventure full of puzzles and hidden ruins",44.99,EUR,ADV,XSX,45,2025-01-23,FR,2026-06-02T10:15:00Z,bob,2026-08-01T11:30:00Z,admin
+b7e5f1a0-0001-4000-8000-0000000000a6,Pixel Puzzler,"Hundreds of bite-sized logic puzzles for quick play sessions",4.99,USD,PUZ,IOS,999,2022-05-10,CA,2026-06-03T08:30:00Z,carol,2026-06-03T08:30:00Z,carol
+b7e5f1a0-0001-4000-8000-0000000000a7,Iron Vanguard,"Squad-based tactical shooter with fast, intense multiplayer matches",69.99,USD,SHO,PS5,150,2026-02-27,US,2026-06-03T08:45:00Z,carol,2026-09-01T16:00:00Z,carol
+b7e5f1a0-0001-4000-8000-0000000000a8,Goal Rush Soccer,"Arcade-style football with seasonal leagues and online tournaments",59.99,EUR,SPT,XSX,90,2026-08-15,GB,2026-06-04T12:00:00Z,dave,2026-06-04T12:00:00Z,dave
+b7e5f1a0-0001-4000-8000-0000000000a9,Lantern Keeper,"A cozy indie adventure about lighting the way for lost spirits",19.99,EUR,IND,NSW,75,2024-04-04,BE,2026-06-04T12:30:00Z,erin,2026-06-04T12:30:00Z,erin
+b7e5f1a0-0001-4000-8000-0000000000b0,Shadow Blade Chronicles,"Side-scrolling ninja action with fluid combat and boss fights",9.99,USD,ACT,AND,500,2023-12-12,KR,2026-06-05T09:20:00Z,erin,2026-07-15T13:10:00Z,admin

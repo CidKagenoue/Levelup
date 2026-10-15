@@ -1,0 +1,235 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Customers
+# @name Customers_GET
+GET {{server}}/odata/v4/orders/Customers
+Authorization: Basic {{username}}:{{password}}
+
+
+### Countries
+# @name Countries_GET
+GET {{server}}/odata/v4/orders/Countries
+Authorization: Basic {{username}}:{{password}}
+
+
+### Rating
+# @name Rating_GET
+GET {{server}}/odata/v4/orders/Rating
+Authorization: Basic {{username}}:{{password}}
+
+
+### Orders
+# @name Orders_GET
+GET {{server}}/odata/v4/orders/Orders
+Authorization: Basic {{username}}:{{password}}
+
+
+### Orders
+# @name Orders_POST
+POST {{server}}/odata/v4/orders/Orders
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "13390900-d4e9-4e89-843e-190922f3c458",
+  "orderDate": "2017-11-12T00:00:00.000Z",
+  "customer": {
+    "ID": "11411222-6dae-42b7-92ad-d75a2b95983b"
+  },
+  "items": [
+    {
+      "ID": "21837668-b19d-49e4-ab58-ed9efba26878",
+      "game": {
+        "ID": "11367568-c2d7-4d4c-a92a-9eaa603a1efb"
+      },
+      "quantity": 0,
+      "createdAt": "2014-06-06T00:00:00.000Z",
+      "createdBy": "createdBy.d021w@example.net",
+      "modifiedAt": "2013-02-14T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.d021w@example.net"
+    },
+    {
+      "ID": "21837669-3424-4738-ad2b-5c2bea021478",
+      "game": {
+        "ID": "11367568-c2d7-4d4c-a92a-9eaa603a1efb"
+      },
+      "quantity": 24,
+      "createdAt": "2007-01-27T00:00:00.000Z",
+      "createdBy": "createdBy.d021x@example.org",
+      "modifiedAt": "2016-04-23T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.d021x@example.org"
+    }
+  ]
+}
+
+
+### Orders
+# @name Orders_PATCH
+PATCH {{server}}/odata/v4/orders/Orders/13390900-d4e9-4e89-843e-190922f3c458
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "13390900-d4e9-4e89-843e-190922f3c458",
+  "orderDate": "2017-11-12T00:00:00.000Z",
+  "customer": {
+    "ID": "11411222-6dae-42b7-92ad-d75a2b95983b"
+  },
+  "items": [
+    {
+      "ID": "21837668-b19d-49e4-ab58-ed9efba26878",
+      "game": {
+        "ID": "11367568-c2d7-4d4c-a92a-9eaa603a1efb"
+      },
+      "quantity": 0,
+      "createdAt": "2014-06-06T00:00:00.000Z",
+      "createdBy": "createdBy.d021w@example.net",
+      "modifiedAt": "2013-02-14T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.d021w@example.net"
+    },
+    {
+      "ID": "21837669-3424-4738-ad2b-5c2bea021478",
+      "game": {
+        "ID": "11367568-c2d7-4d4c-a92a-9eaa603a1efb"
+      },
+      "quantity": 24,
+      "createdAt": "2007-01-27T00:00:00.000Z",
+      "createdBy": "createdBy.d021x@example.org",
+      "modifiedAt": "2016-04-23T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.d021x@example.org"
+    }
+  ]
+}
+
+
+### Orders
+# @name Orders_DELETE
+DELETE {{server}}/odata/v4/orders/Orders/13390900-d4e9-4e89-843e-190922f3c458
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### OrderItems
+# @name OrderItems_GET
+GET {{server}}/odata/v4/orders/OrderItems
+Authorization: Basic {{username}}:{{password}}
+
+
+### OrderItems
+# @name OrderItems_POST
+POST {{server}}/odata/v4/orders/OrderItems
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "21837668-b19d-49e4-ab58-ed9efba26878",
+  "game": {
+    "ID": "11367568-c2d7-4d4c-a92a-9eaa603a1efb"
+  },
+  "quantity": 0
+}
+
+
+### OrderItems
+# @name OrderItems_PATCH
+PATCH {{server}}/odata/v4/orders/OrderItems/21837668-b19d-49e4-ab58-ed9efba26878
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "21837668-b19d-49e4-ab58-ed9efba26878",
+  "game": {
+    "ID": "11367568-c2d7-4d4c-a92a-9eaa603a1efb"
+  },
+  "quantity": 0
+}
+
+
+### OrderItems
+# @name OrderItems_DELETE
+DELETE {{server}}/odata/v4/orders/OrderItems/21837668-b19d-49e4-ab58-ed9efba26878
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+
+
+
+
+
+@catalog = http://localhost:4004/odata/v4/catalog
+@orders  = http://localhost:4004/odata/v4/orders
+@orderId = f0000000-0000-4000-8000-000000000001
+
+
+
+
+
+
+
+### 1. Create an order with 2 items (deep insert)
+POST {{orders}}/Orders
+Content-Type: application/json
+
+{
+  "ID": "{{orderId}}",
+  "orderDate": "2026-10-15T12:00:00Z",
+  "customer_ID": "a1b2c3d4-0006-4000-8000-000000000006",
+  "items": [
+    { "ID": "f0000000-0000-4000-8000-0000000000a1", "game_ID": "b7e5f1a0-0001-4000-8000-0000000000a4", "quantity": 1 },
+    { "ID": "f0000000-0000-4000-8000-0000000000a2", "game_ID": "b7e5f1a0-0001-4000-8000-0000000000a5", "quantity": 2 }
+  ]
+}
+
+### 2. Check items (expect 2)
+GET {{orders}}/Orders({{orderId}})?$expand=items
+
+### 3. Delete the order
+DELETE {{orders}}/Orders({{orderId}})
+
+### 4. Order gone (expect 404)
+GET {{orders}}/Orders({{orderId}})
+
+### 5. Items gone (expect "value": [])
+GET {{orders}}/OrderItems?$filter=order_ID eq {{orderId}}
+
+### 6. Games still exist, via the catalog service (expect 2 rows)
+GET {{catalog}}/Games?$filter=ID eq b7e5f1a0-0001-4000-8000-0000000000a4 or ID eq b7e5f1a0-0001-4000-8000-0000000000a5&$select=title
+
+
+
+
+
+
+
+### 1. Alle orders van één klant, met orderregels en titel van elke game (Erin)
+GET {{orders}}/Orders?$filter=customer_ID eq a1b2c3d4-0003-4000-8000-000000000003&$expand=items($expand=game($select=title))
+
+### 2. Reviews van één game, met de voornaam van de klant
+GET {{catalog}}/Games(b7e5f1a0-0001-4000-8000-0000000000a1)/reviews?$expand=customer($select=firstname)
+
+### 3. Alle games met hun tags (met naam van de tag)
+GET {{catalog}}/Games?$select=title&$expand=tags($expand=tag($select=name))
+
+### 4. Zelfde resultaat, rechtstreeks gefilterd op Games
+GET {{catalog}}/Games?$filter=tags/any(t:t/tag_code eq 'STORY')&$select=title
+
+### 5a. Order zonder klant (veld customer_ID ontbreekt)
+POST {{orders}}/Orders
+Content-Type: application/json
+
+{
+  "orderDate": "2026-10-15T12:00:00Z"
+}
+
+### 5b. Order met een klant die niet bestaat
+POST {{orders}}/Orders
+Content-Type: application/json
+
+{
+  "orderDate": "2026-10-15T12:00:00Z",
+  "customer_ID": "00000000-0000-4000-8000-000000000000"
+}
