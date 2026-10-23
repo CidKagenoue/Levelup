@@ -305,3 +305,13 @@ Authorization: Basic {{username}}:{{password}}
 GET {{server}}/odata/v4/catalog/Games?$filter=tags/any(t:t/tag_code eq 'MULTI')&$select=title
 
 
+### Top games
+# @name TopGames_GET
+GET {{server}}/odata/v4/catalog/topGames(limit=3)
+Authorization: Basic {{username}}:{{password}}
+
+
+### Top games - ongeldige limit (verwacht 400)
+# @name TopGames_invalid_GET
+GET {{server}}/odata/v4/catalog/topGames(limit=0)
+Authorization: Basic {{username}}:{{password}}

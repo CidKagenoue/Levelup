@@ -41,6 +41,8 @@ entity Customers : cuid, managed {
 entity Orders : cuid, managed {
     orderDate : DateTime;
     customer  : Association to Customers @mandatory;
+    orderStatus: Association to OrderStatus default 'OPEN';
+
     items     : Composition of many OrderItems
                     on items.order = $self;
 }
@@ -54,7 +56,7 @@ entity OrderItems : cuid, managed {
 entity Reviews : cuid, managed {
     customer : Association to Customers @mandatory;
     game     : Association to Games     @mandatory;
-    rating   : Association to Rating;
+    rating   : Association to Rating    @mandatory @assert.range: [1, 5];
 }
 
 entity GameTags {
@@ -83,4 +85,9 @@ entity tags : CodeList {
     key code  : String(20);
         games : Association to many GameTags
                     on games.tag = $self;
+}
+
+entity OrderStatus : CodeList {
+    key code    : String(20);
+    criticality : Integer;
 }
