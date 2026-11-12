@@ -19,6 +19,7 @@ entity Games : cuid, managed {
     genre         : Association to Genres;
     platform      : Association to Platforms;
     stock         : Integer default 0;
+    stockCriticality : Integer = (stock = 0 ? 1 : (stock < 5 ? 2 : 3));
     releaseDate   : Date;
     studioCountry : Country;
     tags          : Composition of many GameTags
@@ -57,7 +58,15 @@ entity Reviews : cuid, managed {
     customer : Association to Customers @mandatory;
     game     : Association to Games     @mandatory;
     rating   : Association to Rating    @mandatory @assert.range: [1, 5];
+    comment  : String(1000);
 }
+
+entity GameLeaderboard as select from Reviews {
+    key game.ID as ID,
+        game.title as title,
+        round(avg(rating.code), 2) as avgRating : Decimal(3, 2),
+        count(*) as reviewCount : Integer
+} group by game.ID, game.title;
 
 entity GameTags {
     key game : Association to Games;

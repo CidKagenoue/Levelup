@@ -1,0 +1,15 @@
+{
+  "name": "leaderboard",
+  "version": "0.0.1",
+  "description": "A SAP Fiori leaderboard application.",
+  "private": true,
+  "devDependencies": {
+    "@sap-ux/eslint-plugin-fiori-tools": "^10.0.0",
+    "@sap/ux-ui5-tooling": "1",
+    "@sapui5/types": "~1.120.0",
+    "@ui5/cli": "^4.0.33",
+    "eslint": "^10",
+    "typescript": "^5.9.3",
+    "ui5-tooling-transpile": "^3.10.0"
+  }
+}
