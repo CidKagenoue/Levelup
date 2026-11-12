@@ -1,0 +1,37 @@
+<mvc:View
+    controllerName="admingamemanager.admin.ext.controller.OrderList"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page title="{i18n>ordersTitle}" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <Table items="{ path: 'orders>/Orders', parameters: { $expand: 'customer' } }">
+                <columns>
+                    <Column>
+                        <Text text="{i18n>orderDate}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>customer}" />
+                    </Column>
+                    <Column hAlign="End">
+                        <Text text="{i18n>total}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>status}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{orders>orderDate}" />
+                            <Text text="{= ${orders>customer/firstName} + ' ' + ${orders>customer/lastName} }" />
+                            <ObjectNumber number="{orders>totalAmount}" unit="EUR" />
+                            <ObjectStatus
+                                text="{= ${orders>status_code} === 'PAID' ? ${i18n>paid} : ${orders>status_code} === 'OPEN' ? ${i18n>open} : ${i18n>cancelled} }"
+                                state="{= ${orders>status_code} === 'PAID' ? 'Success' : ${orders>status_code} === 'OPEN' ? 'Warning' : 'Error' }" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

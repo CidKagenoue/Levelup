@@ -2,6 +2,7 @@ using AdminService as service from '../../srv/admin-service';
 
 annotate service.Games with @(
     UI.SelectionFields: [
+        title,
         genre_code,
         platform_code
     ],
@@ -39,6 +40,8 @@ annotate service.Games with {
               @Common.TextArrangement: #TextOnly;
     platform  @title                 : 'Platform'  @Common.Text: platform.name
               @Common.TextArrangement: #TextOnly;
+    stock     @Common.Text           : stockStatus
+              @Common.TextArrangement: #TextOnly;
 };
 
 annotate service.Games with @(
@@ -52,8 +55,7 @@ Value: title } },
  UI.Facets : [
  { $Type: 'UI.ReferenceFacet', ID: 'Algemeen', Label: 'Algemeen',
 Target: '@UI.FieldGroup#Algemeen' },
-{ $Type: 'UI.ReferenceFacet', ID: 'Verkoop', Label: 'Prijs en voorraad', Target: '@UI.FieldGroup#Verkoop' },
-{ $Type: 'UI.ReferenceFacet', ID: 'Reviews', Label: 'Reviews', Target: 'reviews/@UI.LineItem' }
+{ $Type: 'UI.ReferenceFacet', ID: 'Verkoop', Label: 'Prijs en voorraad', Target: '@UI.FieldGroup#Verkoop' }
  ]
 );
 

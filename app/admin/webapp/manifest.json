@@ -23,6 +23,14 @@
           "annotations": [],
           "odataVersion": "4.0"
         }
+      },
+      "orders": {
+        "uri": "/odata/v4/orders/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
       }
     }
   },
@@ -72,6 +80,16 @@
           "earlyRequests": true
         }
       },
+      "orders": {
+        "dataSource": "orders",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
       "@i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "uri": "i18n/i18n.properties"
@@ -92,6 +110,11 @@
           "pattern": "Games({key}):?query:",
           "name": "GamesObjectPage",
           "target": "GamesObjectPage"
+        },
+        {
+          "pattern": "orders",
+          "name": "OrderList",
+          "target": "OrderList"
         }
       ],
       "targets": {
@@ -112,6 +135,13 @@
               },
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "actions": {
+                    "MyOrders": {
+                      "text": "{i18n>myOrders}",
+                      "press": "admingamemanager.admin.ext.controller.GamesListExtension.onMyOrders",
+                      "requiresSelection": false
+                    }
+                  },
                   "tableSettings": {
                     "type": "ResponsiveTable"
                   }
@@ -127,8 +157,38 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Games"
+              "contextPath": "/Games",
+              "content": {
+                "body": {
+                  "sections": {
+                    "GameReviews": {
+                      "template": "admingamemanager.admin.ext.fragment.Reviews",
+                      "title": "{i18n>reviews}"
+                    }
+                  }
+                }
+              }
             }
+          }
+        },
+        "OrderList": {
+          "type": "Component",
+          "id": "OrderList",
+          "name": "sap.fe.core.fpm",
+          "options": {
+            "settings": {
+              "viewName": "admingamemanager.admin.ext.view.OrderList",
+              "contextPath": "/Orders"
+            }
+          }
+        }
+      }
+    },
+    "extends": {
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "sap.fe.templates.ListReport.ListReportController": {
+            "controllerName": "admingamemanager.admin.ext.controller.GamesListExtension"
           }
         }
       }

@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Table items="{ path: 'reviews', parameters: { $expand: 'customer' } }">
+        <columns>
+            <Column>
+                <Text text="{i18n>rating}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>comment}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>customer}" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <RatingIndicator value="{rating_code}" maxValue="5" displayOnly="true" />
+                    <Text text="{comment}" />
+                    <Text text="{customer/firstName}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>

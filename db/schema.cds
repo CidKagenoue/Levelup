@@ -20,6 +20,7 @@ entity Games : cuid, managed {
     platform      : Association to Platforms;
     stock         : Integer default 0;
     stockCriticality : Integer = (stock = 0 ? 1 : (stock < 5 ? 2 : 3));
+    stockStatus   : String(20) = (stock = 0 ? 'Uitverkocht' : 'Beschikbaar');
     releaseDate   : Date;
     studioCountry : Country;
     tags          : Composition of many GameTags
@@ -40,18 +41,20 @@ entity Customers : cuid, managed {
 }
 
 entity Orders : cuid, managed {
-    orderDate : DateTime;
-    customer  : Association to Customers @mandatory;
-    orderStatus: Association to OrderStatus default 'OPEN';
+    orderDate   : DateTime;
+    customer    : Association to Customers @mandatory;
+    status      : Association to OrderStatus default 'OPEN';
+    totalAmount : Decimal(9, 2) default 0;
 
-    items     : Composition of many OrderItems
-                    on items.order = $self;
+    items       : Composition of many OrderItems
+                      on items.order = $self;
 }
 
 entity OrderItems : cuid, managed {
-    order    : Association to Orders @mandatory;
-    game     : Association to Games  @mandatory;
-    quantity : Integer               @mandatory;
+    order     : Association to Orders @mandatory;
+    game      : Association to Games  @mandatory;
+    quantity  : Integer               @mandatory;
+    unitPrice : Decimal(6, 2);
 }
 
 entity Reviews : cuid, managed {

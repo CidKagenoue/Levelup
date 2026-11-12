@@ -2,7 +2,11 @@ using {levelup as db} from '../db/schema';
 
 service orderService @(path: 'orders') {
     @readonly
-    entity Customers  as projection on db.Customers;
+    entity Customers as projection on db.Customers {
+        ID,
+        firstname as firstName,
+        lastname as lastName
+    };
 
     @readonly
     entity Games      as projection on db.Games;
